@@ -16,10 +16,26 @@ def main():
     save_bounding_boxes(bounding_boxes)
     #disable_logging(plot_frame)(frame_rgb)
     cropped_images = crop_img(frame_rgb, bounding_boxes, shufflenet_transform)
-    disable_logging(plot_images)(cropped_images)
+    #disable_logging(plot_images)(cropped_images)
     labels = classificate_state(cropped_images)
     
     logging.debug(f"Labels: {labels}")
+
+    # cap = cv2.VideoCapture(0)
+    # # Set mediapipe model 
+    # while cap.isOpened():
+
+    #     cropped_images = crop_img(frame_rgb, bounding_boxes, shufflenet_transform)
+    #     disable_logging(plot_images)(cropped_images)
+    #     labels = classificate_state(cropped_images)
+        
+    #     logging.debug(f"Labels: {labels}")
+
+    #     # Break gracefully
+    #     if cv2.waitKey(10) & 0xFF == ord('q'):
+    #         break
+    # cap.release()
+    # cv2.destroyAllWindows()
 
 if __name__ == "__main__":
     main()
