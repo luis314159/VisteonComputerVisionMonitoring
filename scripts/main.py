@@ -24,7 +24,7 @@ def main():
     # cap = cv2.VideoCapture(0)
     # # Set mediapipe model 
     # while cap.isOpened():
-
+            
     #     cropped_images = crop_img(frame_rgb, bounding_boxes, shufflenet_transform)
     #     disable_logging(plot_images)(cropped_images)
     #     labels = classificate_state(cropped_images)
